@@ -3,8 +3,41 @@
 <head>
     <meta charset="UTF-8">
     <title>Re-Activa Copilot</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            height: 100%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            position: relative;
+        }
+
+        iframe {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            width: 80%;
+            height: 100%;
+            border: none;
+            transform: translate(-50%, -50%);
+        }
+
+        img.logo {
+            position: absolute;
+            top: 20px;  /* Puedes ajustar la distancia desde la parte superior */
+            left: 20px; /* Puedes ajustar la distancia desde el lado izquierdo */
+            width: 100px; /* Ajusta el tamaño del logo */
+            height: auto;
+        }
+    </style>
 </head>
 <body>
-    <iframe src="https://dev.clonebyme.com/embed?token=5VTilszq24" style="position: absolute; top: 50%; left: 50%; width: 80%; height: 100%; border: none; transform: translate(-50%, -50%);" allow="microphone"></iframe>
+    <!-- Logo en la parte superior izquierda -->
+    <img src="https://www.zen-capital.es/wp-content/uploads/2019/04/logo-zencapital-rojo.png" alt="Logo" class="logo">
+
+    <!-- Iframe centrado -->
+    <iframe src="https://dev.clonebyme.com/embed?token=5VTilszq24" allow="microphone"></iframe>
 </body>
 </html>
