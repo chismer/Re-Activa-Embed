@@ -2,25 +2,42 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Re-Activa Copilot</title>
     <style>
-
         iframe {
             position: absolute;
             top: 50%;
             left: 50%;
-            width: 80%;
-            height: 100%;
+            width: 100vw;
+            height: 100vh;
             border: none;
             transform: translate(-50%, -50%);
         }
 
         img.logo {
             position: absolute;
-            top: 20px;  /* Puedes ajustar la distancia desde la parte superior */
-            left: 20px; /* Puedes ajustar la distancia desde el lado izquierdo */
-            width: 150px; /* Ajusta el tamaño del logo */
+            top: 20px;
+            left: 20px;
+            width: 150px;
             height: auto;
+            z-index: 1000;  /* Asegura que el logo esté por encima */
+        }
+
+        @media (max-width: 768px) {
+            iframe {
+                width: 100%;
+                height: 100%;
+                top: 0;
+                left: 0;
+                transform: none;
+            }
+
+            img.logo {
+                top: 10px;
+                left: 10px;
+                width: 100px;  /* Tamaño más pequeño del logo en móvil */
+            }
         }
     </style>
 </head>
